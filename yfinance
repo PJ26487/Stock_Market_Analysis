@@ -1,0 +1,91 @@
+# importing all the libraries
+import pandas as pd
+import numpy as np
+import time
+# importing spacy and its libraries
+import spacy
+from spacy import displacy
+from collections import Counter
+import en_core_web_md
+import json
+import itertools
+pd.set_option('display.max_colwidth', None)
+import pprint
+import requests
+# sentiment analysis library
+import xgboost as xgb
+import textblob
+from textblob import TextBlob
+# plotting graphs library
+import matplotlib.pyplot as plt
+import nltk
+import nltk.corpus
+from nltk import sent_tokenize, word_tokenize
+from nltk.stem.snowball import SnowballStemmer
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.corpus import stopwords
+from nltk.sentiment import SentimentIntensityAnalyzer
+from datetime import datetime, timedelta
+import finnhub
+import xgboost
+from datetime import datetime
+import datetime as dt
+from datetime import timedelta
+import dateutil.relativedelta
+import streamlit as st
+import yfinance as yf
+
+# defining current time elements
+q = 'TSLA'
+from_time = '2021-08-01'
+to_time = '2022-07-20'
+current_month = datetime.now().month
+current_year = datetime.now().year
+current_day = datetime.now().day
+current_date = str(current_year)+'-'+str(current_month)+'-'+str(current_day)
+current_date = pd.to_datetime(current_date)
+last_month_date = current_date - dateutil.relativedelta.relativedelta(months=1)
+current_date
+
+month_list = [current_date,current_date-dateutil.relativedelta.relativedelta(months=1),current_date-dateutil.relativedelta.relativedelta(months=2),current_date-dateutil.relativedelta.relativedelta(months=3),current_date-dateutil.relativedelta.relativedelta(months=4)]
+month_list_1 = [current_date-dateutil.relativedelta.relativedelta(months=1),current_date-dateutil.relativedelta.relativedelta(months=2),current_date-dateutil.relativedelta.relativedelta(months=3),current_date-dateutil.relativedelta.relativedelta(months=4),current_date-dateutil.relativedelta.relativedelta(months=5)]
+
+# defining the functions
+# defining functions to create a streamlit dashboard
+
+
+@st.cache(suppress_st_warning=True)
+def stock_info(name,start,end):
+    stock_df = yf.download(name,
+                           start=start,
+                           end=end,
+                           progress=False)
+
+    stock_df['date'] = stock_df.index
+    stock_show = stock_df.plot(x='date', y='Close', kind='line')
+    return stock_show
+    # using the ticker to get more information
+    tsla = yf.Ticker(name)
+    print('the major shareholders are')
+    df_share = tsla.major_holders
+    df_recom = tsla.recommendations
+    df_options = tsla.options
+    df_sus = tsla.sustainability
+
+    start = pd.to_datetime(start)
+    start = start.to_pydatetime()
+
+    # filtering the dfs
+    df_recom = df_recom.tail(10)
+
+    # df_sus = df_sus[df_sus['']]
+    print(tsla.major_holders)
+    print(' ')
+    print('Recommendations')
+    print(df_recom)
+    print(' ')
+    print('Options')
+    print(tsla.options)
+    print('')
+
+
