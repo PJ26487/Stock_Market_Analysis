@@ -13,7 +13,7 @@ current_day = datetime.now().day
 current_date = str(current_year)+'-'+str(current_month)+'-'+str(current_day)
 current_date = pd.to_datetime(current_date)
 print(current_date)
-name = name
+name = 'TSLA'
 start = current_date - dateutil.relativedelta.relativedelta(month = 1)
 end = current_date
 stock_df = yf.download(name,
