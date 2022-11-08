@@ -1,5 +1,5 @@
 pandas
 numpy
 datetime
-matplotlib.pyplot
+matplotlib
 yfinance
