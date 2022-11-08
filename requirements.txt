@@ -1,9 +1,5 @@
 pandas
 numpy
 datetime
-json
-itertools
-pprint
-textblob
 matplotlib.pyplot
 yfinance
