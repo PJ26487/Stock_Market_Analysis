@@ -1,11 +1,6 @@
 pandas
 numpy
-time 
-spacy 
-displacy
-collections
-Counter
-en_core_web_md
+datetime
 json
 itertools
 pprint
