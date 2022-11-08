@@ -22,9 +22,6 @@ stock_df = yf.download(name,
                       progress=False)
 
 stock_df['date'] = stock_df.index
-stock_df.plot(x ='date', y ='Close',kind = 'line')
-plt.show()
-
 # using the ticker to get more information
 tsla = yf.Ticker(name)
 print('the major shareholders are')
