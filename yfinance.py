@@ -7,7 +7,7 @@ import time
 import spacy 
 from spacy import displacy
 from collections import Counter
-import en_core_web_md
+import en_core_web_sm
 
 import json 
 import itertools
