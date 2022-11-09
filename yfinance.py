@@ -39,7 +39,7 @@ import dateutil.relativedelta
 import streamlit as st 
 
 # defining current time elements
-nlp = spacy.load(en_core_web_md)
+nlp = spacy.load(en_core_web_sm)
 q = 'TSLA'
 from_time = '2021-08-01' 
 to_time = '2022-07-20'
