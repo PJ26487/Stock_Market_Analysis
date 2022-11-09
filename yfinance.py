@@ -7,7 +7,7 @@ import time
 import spacy 
 from spacy import displacy
 from collections import Counter
-spacy.download(en_core_web_md)
+md = spacy.load(en_core_web_md)
 import en_core_web_md
 
 import json 
