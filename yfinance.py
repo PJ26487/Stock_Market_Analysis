@@ -34,7 +34,6 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from datetime import datetime, timedelta
 
 import finnhub
-import xgboost
 from datetime import datetime
 import datetime as dt
 from datetime import timedelta
