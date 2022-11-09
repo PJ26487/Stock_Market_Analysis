@@ -22,7 +22,6 @@ from textblob import TextBlob
 
 # plotting graphs library
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 import nltk 
 import nltk.corpus
