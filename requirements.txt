@@ -6,3 +6,4 @@ textblob
 finnhub-python
 matplotlib
 nltk
+streamlit
