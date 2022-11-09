@@ -17,7 +17,6 @@ import pprint
 import requests
 
 # sentiment analysis library
-import xgboost as xgb
 import textblob 
 from textblob import TextBlob
 
