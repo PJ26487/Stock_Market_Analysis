@@ -7,4 +7,4 @@ finnhub-python
 matplotlib
 nltk
 streamlit
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm/en_core_web_sm.tar.gz 313
+-e https://github.com/explosion/spacy-models/releases/download/en_vectors_web_sm-2.1.0/en_vectors_web_sm-2.1.0.tar.gz#egg=en_core_web_sm
