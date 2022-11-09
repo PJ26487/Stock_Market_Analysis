@@ -7,8 +7,7 @@ import time
 import spacy 
 from spacy import displacy
 from collections import Counter
-#md = spacy.load(en_core_web_md)
-#import en_core_web_md
+import en_core_web_md
 
 import json 
 import itertools
@@ -40,7 +39,7 @@ import dateutil.relativedelta
 import streamlit as st 
 
 # defining current time elements
-nlp = en_core_web_sm.load()
+nlp = spacy.load(en_core_web_md)
 q = 'TSLA'
 from_time = '2021-08-01' 
 to_time = '2022-07-20'
