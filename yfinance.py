@@ -2,7 +2,6 @@
 import pandas as pd 
 import numpy as np 
 import time 
-nlp = en_core_web_sm.load()
 
 # importing spacy and its libraries 
 import spacy 
