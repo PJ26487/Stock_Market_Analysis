@@ -39,6 +39,11 @@ from datetime import timedelta
 import dateutil.relativedelta
 import streamlit as st 
 
+ try:
+      nlp = spacy.load("en_core_web_md")
+  except: # If not present, we download
+      spacy.cli.download("en_core_web_md")
+      nlp = spacy.load("en_core_web_md")
 
 # defining current time elements
 nlp = en_core_web_md.load()
